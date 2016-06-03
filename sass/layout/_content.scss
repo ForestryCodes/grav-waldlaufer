@@ -1,0 +1,129 @@
+.site {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+.about {
+    background: $primary-color;
+    color: rgba(255, 255, 255, 0.75);
+    text-align: center;
+    padding: 3.6rem 0 1.8rem 0;
+
+    .button {
+        border-color: #fff;
+        color: #fff;
+    }
+}
+
+.about__headline {
+    color: #fff;
+}
+
+.about__subline {
+    font-size: 1.5rem;
+    line-height: 1.8rem;
+    margin-bottom: 0;
+}
+
+.projects {
+    padding: 3.6rem 0 0 0;
+}
+
+.projects__text {
+    text-align: center;
+    padding-bottom: 1.8rem;
+}
+
+.projects__list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.project {
+    padding: 0;
+    margin: 0;
+    position: relative;
+    box-shadow: inset 0 2rem 2rem -2rem rgba(0, 0, 0, 0.8);
+    background-repeat: no-repeat;
+    background-color: rgba(0, 0, 0, 0.8);
+    background-size: cover;
+    background-position: center center;
+    transition: background-color 0.5s ease;
+
+    &:before {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: inherit;
+        content: ' ';
+    }
+
+    &:hover {
+        background-color: transparent;
+    }
+
+    a {
+        display: block;
+        width: 100%;
+    }
+}
+
+.project__details {
+    color: #fff;
+    padding: 3.6rem 0;
+
+    p {
+        color: rgba(255, 255, 255, 0.5);
+        font-size: 2.0rem;
+        line-height: 3.6rem;
+    }
+}
+
+.blog {
+    padding: 3.6rem 0 1.8rem 0;
+}
+
+.blog__intro {
+    text-align: center;
+    padding-bottom: 1.8rem;
+}
+
+.blog__post {
+    figure {
+        overflow: hidden;
+        border-radius: $global-radius;
+        margin: 0 0 1.8rem 0;
+    }
+
+    img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+        transition: all 0.5s ease;
+    }
+}
+
+.blog__post-link {
+    color: $font-color;
+    text-decoration: none;
+
+    &:hover {
+        color: $link-color;
+
+        img {
+            transform: scale(1.1);
+        }
+    }
+}
+
+.blog__post-meta {
+    color: $light-grey;
+}
