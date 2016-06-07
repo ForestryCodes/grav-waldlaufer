@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Basic Page Needs
+        –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+        <meta charset="utf-8">
+        <title>Your page title here :)</title>
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <!-- Mobile Specific Metas
+        –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- FONT
+        –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+        <link href="//fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic" rel="stylesheet" type="text/css">
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+        <!-- CSS
+        –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+        <link rel="stylesheet" href="css-compiled/main.css">
+
+        <!-- Favicon
+        –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+        <link rel="icon" type="image/png" href="images/favicon.png">
+    </head>
+    <body>
+        <div class="site">
+            <header>
+                <div class="container">
+                    <div class="row">
+                        <div class="two columns header__logo">
+                            <h2>Site</h2>
+                            <button class="js-toggle-nav"><i class="fa fa-2x fa-bars"></i></button>
+                        </div>
+                        <nav class="ten columns header__nav">
+                            <ul class="header__nav-list">
+                                <li class="header__nav-item"><a href="index.html">Home</a></li>
+                                <li class="header__nav-item"><a href="projects.html">Projects</a></li>
+                                <li class="header__nav-item"><a href="blog.html">Blog</a></li>
+                                <li class="header__nav-item--active"><a href="page.html">Page</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </header>
+            <main>
+                <section>
+                    <div class="container">
+                        <h1>Grav is Running!</h1>
+                        <h2>You have installed <strong>Grav</strong> successfully</h2>
+                        <p>Congratulations! You have installed the <strong>Base Grav Package</strong> that provides a <strong>simple page</strong> and the default <strong>antimatter</strong> theme to get you started.</p>
+                        <blockquote>
+                        <p>If you want a more <strong>full-featured</strong> base install, you should check out <a href="http://getgrav.org/downloads"><strong>Skeleton</strong> packages available in the downloads</a>.</p>
+                        </blockquote>
+                        <h3>Find out all about Grav</h3>
+                        <ul>
+                        <li>Learn about <strong>Grav</strong> by checking out our dedicated <a href="http://learn.getgrav.org">Learn Grav</a> site.</li>
+                        <li>Download <strong>plugins</strong>, <strong>themes</strong>, as well as other Grav <strong>skeleton</strong> packages from the <a href="http://getgrav.org/downloads">Grav Downloads</a> page.</li>
+                        <li>Check out our <a href="http://getgrav.org/blog">Grav Development Blog</a> to find out the latest goings on in the Grav-verse.</li>
+                        </ul>
+                        <h3>Edit this Page</h3>
+                        <p>To edit this page, simply navigate to the folder you installed <strong>Grav</strong> into, and then browse to the <code>user/pages/01.home</code> folder and open the <code>default.md</code> file in your <a href="http://learn.getgrav.org/basics/requirements">editor of choice</a>.  You will see the content of this page in <a href="http://learn.getgrav.org/content/markdown">Markdown format</a>.</p>
+                        <h3>Create a New Page</h3>
+                        <p>Creating a new page is a simple affair in <strong>Grav</strong>.  Simply follow these simple steps:</p>
+                        <ol>
+                        <li>Navigate to your pages folder: <code>user/pages/</code> and create a new folder.  In this example, we will use <a href="http://learn.getgrav.org/content/content-pages">explicit default ordering</a> and call the folder <code>02.mypage</code>.</li>
+                        <li>
+                        <p>Launch your text editor and paste in the following sample code:</p>
+                        <pre><code>---
+                        title: My New Page
+                        ---
+                        # My New Page!
+
+                        This is the body of **my new page** and I can easily use _Markdown_ syntax here.</code></pre>
+                        </li>
+                        <li>Save this file in the <code>user/pages/02.mypage/</code> folder as <code>default.md</code>. This will tell <strong>Grav</strong> to render the page using the <strong>default</strong> template.</li>
+                        <li>That is it! Reload your browser to see your new page in the menu.</li>
+                        </ol>
+                        <blockquote>
+                        <p>NOTE: The page will automatically show up in the Menu after the "Home" menu item. If you wish to change the name that shows up in the Menu, simple add: <code>menu: My Page</code> between the dashes in the page content. This is called the YAML front matter, and it is where you configure page-specific options.</p>
+                        </blockquote>
+                        <hr>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>foo</th>
+                                    <th>bar</th>
+                                    <th>baz</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>foo</td>
+                                    <td>bar</td>
+                                    <td>baz</td>
+                                </tr>
+                                <tr>
+                                    <td>foo</td>
+                                    <td>bar</td>
+                                    <td>baz</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <a class="button">button</a>
+                    </div>
+                </section>
+            </main>
+            <footer>
+                <div class="container">
+                    <div class="row">
+                        <div class="four columns footer__copyright">
+                            <h3>Site</h3>
+                            <p>&copy; Year Site<br>All Rights Reserved.</p>
+                        </div>
+                        <nav class="four columns footer__nav">
+                            <h4>Quick links</h4>
+                            <ul class="footer__nav-list">
+                                <li class="footer__nav-item"><a href="#">Foo</a></li>
+                                <li class="footer__nav-item"><a href="#">Bar</a></li>
+                                <li class="footer__nav-item"><a href="#">Baz</a></li>
+                            </ul>
+                        </nav>
+                        <nav class="four columns footer__nav">
+                            <h4>Connect</h4>
+                            <ul class="footer__nav-list">
+                                <li class="footer__nav-item">
+                                    <a href="#"><i class="fa fa-facebook-official"></i> Facebook</a>
+                                </li>
+                                <li class="footer__nav-item social-icons__item">
+                                    <a href="#"><i class="fa fa-twitter"></i> Twitter</a>
+                                </li>
+                                <li class="footer__nav-item social-icons__item">
+                                    <a href="#"><i class="fa fa-github"></i> GitHub</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="footer__made">
+                        <p>Made with <i class="fa fa-heart"></i> in Germany</p>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+        <script>
+            $(document).ready(function () {
+                $('.js-toggle-nav').on('click', function () {
+                    $('.header__nav').toggleClass('header__nav--expanded');
+                });
+            });
+        </script>
+    </body>
+</html>

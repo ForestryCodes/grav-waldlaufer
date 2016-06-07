@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Basic Page Needs
+        –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+        <meta charset="utf-8">
+        <title>Your page title here :)</title>
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <!-- Mobile Specific Metas
+        –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- FONT
+        –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+        <link href="//fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic" rel="stylesheet" type="text/css">
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+        <!-- CSS
+        –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+        <link rel="stylesheet" href="css-compiled/main.css">
+
+        <!-- Favicon
+        –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+        <link rel="icon" type="image/png" href="images/favicon.png">
+    </head>
+    <body>
+        <div class="site">
+            <header>
+                <div class="container">
+                    <div class="row">
+                        <div class="two columns header__logo">
+                            <h2>Site</h2>
+                            <button class="js-toggle-nav"><i class="fa fa-2x fa-bars"></i></button>
+                        </div>
+                        <nav class="ten columns header__nav">
+                            <ul class="header__nav-list">
+                                <li class="header__nav-item"><a href="index.html">Home</a></li>
+                                <li class="header__nav-item--active"><a href="projects.html">Projects</a></li>
+                                <li class="header__nav-item"><a href="blog.html">Blog</a></li>
+                                <li class="header__nav-item"><a href="page.html">Page</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </header>
+            <main>
+                <div class="container">
+                    <div class="row">
+                        <aside class="eight columns">
+                            <p><img src="//placehold.it/1024x768" alt="Image" class="u-max-full-width"></p>
+                            <p><img src="//placehold.it/1024x768" alt="Image" class="u-max-full-width"></p>
+                            <p><img src="//placehold.it/1024x768" alt="Image" class="u-max-full-width"></p>
+                        </aside>
+                        <section class="four columns">
+                            <h2>Project Name Here</h2>
+                            <p>Far from the countries Vokalia and Consonantia</p>
+                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics. Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics. </p>
+                        </section>
+                    </div>
+                    <div class="row pagination">
+                        <div class="four columns pagination__prev">
+                            <a href="#">
+                                <i class="fa fa-chevron-left"></i>
+                                <span class=" hidden-xs">Previous project</span>
+                            </a>
+                        </div>
+                        <div class="four columns pagination__list">
+                            <a href="projects.html">
+                                <i class="fa fa-list"></i>
+                                Back to list
+                            </a>
+                        </div>
+                        <div class="four columns pagination__next">
+                            <a href="#">
+                                <span class=" hidden-xs">Next project</span>
+                                <i class="fa fa-chevron-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <footer>
+                <div class="container">
+                    <div class="row">
+                        <div class="four columns footer__copyright">
+                            <h3>Site</h3>
+                            <p>&copy; Year Site<br>All Rights Reserved.</p>
+                        </div>
+                        <nav class="four columns footer__nav">
+                            <h4>Quick links</h4>
+                            <ul class="footer__nav-list">
+                                <li class="footer__nav-item"><a href="#">Foo</a></li>
+                                <li class="footer__nav-item"><a href="#">Bar</a></li>
+                                <li class="footer__nav-item"><a href="#">Baz</a></li>
+                            </ul>
+                        </nav>
+                        <nav class="four columns footer__nav">
+                            <h4>Connect</h4>
+                            <ul class="footer__nav-list">
+                                <li class="footer__nav-item">
+                                    <a href="#"><i class="fa fa-facebook-official"></i> Facebook</a>
+                                </li>
+                                <li class="footer__nav-item social-icons__item">
+                                    <a href="#"><i class="fa fa-twitter"></i> Twitter</a>
+                                </li>
+                                <li class="footer__nav-item social-icons__item">
+                                    <a href="#"><i class="fa fa-github"></i> GitHub</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="footer__made">
+                        <p>Made with <i class="fa fa-heart"></i> in Germany</p>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+        <script>
+            $(document).ready(function () {
+                $('.js-toggle-nav').on('click', function () {
+                    $('.header__nav').toggleClass('header__nav--expanded');
+                });
+            });
+        </script>
+    </body>
+</html>
