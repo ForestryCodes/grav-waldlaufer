@@ -182,3 +182,12 @@ main {
 .blog__post-meta {
     color: $light-grey;
 }
+
+.blog__sidebar-archive {
+    list-style-type: none;
+
+    a {
+        text-decoration: none;
+        color: $font-color;
+    }
+}
