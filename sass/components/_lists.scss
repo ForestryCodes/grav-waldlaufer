@@ -15,16 +15,16 @@ ul {
   padding-left: 0;
   margin-top: 0;
   ul, ol {
-    margin: 1.8rem 0 1.8rem 3rem;
+    margin: $line-height 0 $line-height 3rem;
   }
 }
 
 ol {
   ol, ul {
-    margin: 1.8rem 0 1.8rem 3rem;
+    margin: $line-height 0 $line-height 3rem;
   }
 }
 
 li {
-  margin-bottom: 1.8rem;
+  margin-bottom: $line-height;
 }

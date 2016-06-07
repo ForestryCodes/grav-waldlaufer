@@ -9,8 +9,9 @@ html {
 }
 
 body {
+  background: $light-background;
   font-size: 1.5em; // currently ems cause chrome bug misinterpreting rems on body element
-  line-height: 1.2;
+  line-height: 1.6;
   font-weight: 400;
   font-family: $font-family;
   color: $font-color;
@@ -30,8 +31,8 @@ a {
 //––––––––––––––––––––––––––––––––––––––––––––––––––
 
 hr {
-  margin-top: 3rem;
-  margin-bottom: 3.5rem;
+  margin-top: ($line-height - 0.1);
+  margin-bottom: ($line-height - 0.1);
   border-width: 0;
   border-top: 1px solid $light-grey;
 }

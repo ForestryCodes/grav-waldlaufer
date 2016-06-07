@@ -16,9 +16,11 @@ $secondary-color: lighten($dark-grey, 13.5%) !default;
 $border-color: #343434 !default;
 $link-color: #8ac112 !default;
 $font-color: #333 !default;
+$light-background: #fafafa;
 
 // Typography
 $font-family: "Lato", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$line-height: 2.4rem;
 
 //Grid Variables
 $container-width: 960px !default;

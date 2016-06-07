@@ -3,14 +3,14 @@
 
 button,
 .button {
-  margin-bottom: 1.8rem;
+  margin-bottom: $line-height;
 }
 
 input,
 textarea,
 select,
 fieldset {
-  margin-bottom: 1.8rem;
+  margin-bottom: $line-height;
 }
 
 pre,
@@ -22,9 +22,10 @@ p,
 ul,
 ol,
 form {
-  margin-bottom: 1.8rem;
+  margin-bottom: $line-height;
 }
 
-pre {
+pre,
+blockquote {
   margin-top: 0;
 }
