@@ -8,6 +8,23 @@ main {
     flex: 1;
 }
 
+.slider {
+    .glide__track {
+        margin-bottom: 0;
+    }
+
+    .glide__slide {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        box-sizing: border-box;
+        height: 36rem;
+        margin-bottom: 0;
+        padding-top: 9rem;
+        text-align: center;
+    }
+}
+
 .about {
     background: $primary-color;
     color: rgba(255, 255, 255, 0.75);
@@ -78,12 +95,19 @@ main {
 
 .project__details {
     color: #fff;
-    padding: 3.6rem 0;
+    padding: 3.6rem 2.0rem;
 
     p {
         color: rgba(255, 255, 255, 0.5);
         font-size: 2.0rem;
         line-height: 3.6rem;
+    }
+}
+
+@media (#{$bp-larger-than-phablet}) {
+    .project__details {
+        padding-left: 0;
+        padding-right: 0;
     }
 }
 
