@@ -1,0 +1,10 @@
+name: Waldläufer
+version: 0.1.0
+icon: trees
+author:
+  name: Daniel Melzer
+  email: daniel@forestry.codes
+  url: https://forestry.codes
+keywords: waldlaufer, theme, html5, responsive, css3
+bugs: https://github.com/ForestryCodes/grav-waldlaufer/issues
+license: MIT
