@@ -1,0 +1,45 @@
+{% extends 'partials/base.html.twig' %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <aside class="eight columns">
+    {% for image in page.media.images %}
+            <p><img src="{{ image.url }}" alt="" class="u-max-full-width"></p>
+    {% endfor %}
+        </aside>
+        <section class="four columns">
+            <h2>{{ page.title }}</h2>
+            {{ content }}
+        </section>
+    </div>
+    <div class="row pagination">
+        <div class="four columns pagination__prev">
+    {% if not page.isLast %}
+            <a href="{{ page.prevSibling.url }}">
+                <i class="fa fa-chevron-left"></i>
+                <span class=" hidden-xs">Previous project</span>
+            </a>
+    {% else %}
+        &nbsp;
+    {% endif %}
+        </div>
+        <div class="four columns pagination__list">
+            <a href="{{ page.parent.url }}">
+                <i class="fa fa-list"></i>
+                Back to list
+            </a>
+        </div>
+        <div class="four columns pagination__next">
+    {% if not page.isFirst %}
+            <a href="{{ page.nextSibling.url }}">
+                <span class=" hidden-xs">Next project</span>
+                <i class="fa fa-chevron-right"></i>
+            </a>
+    {% else %}
+        &nbsp;
+    {% endif %}
+        </div>
+    </div>
+</div>
+{% endblock %}
