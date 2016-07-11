@@ -1,0 +1,11 @@
+{% extends 'partials/simplesearch_base.html.twig' %}
+
+{% block content %}
+<div class="container">
+    <h1>Search results</h1>
+    <p>Query: <strong>{{ query }}</strong> found {{ search_results.count }} {{ 'result'|pluralize(search_results.count) }}</p>
+    {% for page in search_results %}
+        {% include 'partials/bloglist_item.html.twig' with {'article': page} %}
+    {% endfor %}
+</div>
+{% endblock %}
