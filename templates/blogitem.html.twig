@@ -1,0 +1,75 @@
+{% embed 'partials/base.html.twig' %}
+    {% set base_url = page.parent.url %}
+    {% set feed_url = base_url %}
+
+    {% if '/' == base_url %}
+        {% set base_url = '' %}
+    {% endif %}
+
+    {% if base_url == base_url_relative %}
+        {% set feed_url = base_url~'/'~page.parent.slug %}
+    {% endif %}
+
+    {% set header_image = page.media.images|first %}
+
+    {% block content %}
+<div class="container">
+    <div class="row">
+        <section class="eight columns">
+            <h2>{{ page.title }}</h2>
+            <p class="blog__post-meta">{{ page.date|date('d, F Y') }}</p>
+        {% if header_image %}
+            <img src="{{ header_image.url }}" alt="Image" class="u-max-full-width">
+        {% endif %}
+            {{ page.content }}
+        </section>
+        <aside class="four columns">
+            {% include 'partials/sidebar.html.twig' %}
+        </aside>
+    </div>
+    <div class="row pagination">
+        <div class="four columns pagination__prev">
+    {% if not page.isLast %}
+            <a href="{{ page.prevSibling.url }}">
+                <i class="fa fa-chevron-left"></i>
+                <span class=" hidden-xs">Previous post</span>
+            </a>
+    {% else %}
+            &nbsp;
+    {% endif %}
+        </div>
+        <div class="four columns pagination__list">
+            <a href="{{ page.parent.url }}">
+                <i class="fa fa-list"></i>
+                Back to list
+            </a>
+        </div>
+        <div class="four columns pagination__next">
+    {% if not page.isFirst %}
+            <a href="{{ page.nextSibling.url }}">
+                <span class=" hidden-xs">Next post</span>
+                <i class="fa fa-chevron-right"></i>
+            </a>
+    {% else %}
+            &nbsp;
+    {% endif %}
+        </div>
+    </div>
+</div>
+    {% endblock %}
+
+    {% if config.plugins.simplesearch.enabled %}
+        {% block javascripts %}
+            {{ assets.addInlineJs('
+    $(document).ready(function ($) {
+        var input = $("[data-search-input]");
+        input.on("keypress", function (event) {
+            if (event.which == 13 && input.val().length >= '~config.get('plugins.simplesearch.min_query_length', 3)~') {
+                event.preventDefault();
+                window.location.href = input.data("search-input") + "'~config.system.param_sep~'" + input.val();
+            }
+        });
+    });') }}
+        {% endblock %}
+    {% endif %}
+{% endembed %}
