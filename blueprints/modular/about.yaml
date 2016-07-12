@@ -1,0 +1,33 @@
+title: About
+'@extends':
+  type: default
+  context: blueprints://pages
+
+form:
+  fields:
+    tabs:
+      type: tabs
+      active: 1
+
+      fields:
+        about:
+          type: tab
+          title: About Settings
+
+          fields:
+            header.subline:
+              type: text
+              label: Subline
+              style: vertical
+            header.headline:
+              type: text
+              label: Headline
+              style: vertical
+            header.button_text:
+              label: Button text
+              type: text
+              style: vertical
+            header.button_url:
+              label: Button URL
+              type: text
+              style: vertical
