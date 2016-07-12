@@ -44,14 +44,10 @@
         </div>
 {% block javascripts %}
         {% do assets.addJs('//ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js', 101) %}
+        {% do assets.addJs('theme://js/main.js', 100) %}
 {% endblock %}
         {{ assets.js() }}
-        <script>
-            $(document).ready(function () {
-                $('.js-toggle-nav').on('click', function () {
-                    $('.header__nav').toggleClass('header__nav--expanded');
-                });
-            });
-        </script>
+{% block bottom %}
+{% endblock %}
     </body>
 </html>
