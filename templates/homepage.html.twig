@@ -1,0 +1,27 @@
+{% extends 'partials/base.html.twig' %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    {% do assets.addCss('theme://css/glide.core.min.css') %}
+{% endblock %}
+
+{% block content %}
+    {% for module in page.collection %}
+    {{ module.content }}
+    {% endfor %}
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    {% do assets.addJs('theme://js/glide.min.js', 99) %}
+{% endblock %}
+
+{% block bottom %}
+<script>
+    $(document).ready(function () {
+        $('.glide').glide({
+            type: 'carousel'
+        });
+    });
+</script>
+{% endblock %}

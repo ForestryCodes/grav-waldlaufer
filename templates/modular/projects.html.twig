@@ -1,0 +1,17 @@
+<section class="projects" id="projects">
+    <div class="container">
+        <div class="row">
+            <div class="eight columns offset-by-two projects__text">
+                {{ content }}
+                <a href="{{ page.header.button_url }}" class="button button-primary">{{ page.header.button_text }}</a>
+            </div>
+        </div>
+    </div>
+
+    <ul class="projects__list">
+{% for project in page.header.projects %}
+    {% set project_page = page.find(project.page) %}
+    {% include 'partials/projectlist_item.html.twig' with {'project': project_page} %}
+{% endfor %}
+    </ul>
+</section>

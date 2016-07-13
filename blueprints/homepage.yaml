@@ -1,0 +1,24 @@
+title: Homepage
+@extends:
+  type: default
+  context: blueprints://pages
+
+title: Default
+
+form:
+  fields:
+    tabs:
+      type: tabs
+      active: 1
+
+      fields:
+        homepage:
+          type: tab
+          title: Homepage Option
+
+          fields:
+            header.header_class:
+              type: text
+              label: Header class
+              default: header--homepage
+              readonly: true

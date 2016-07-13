@@ -1,0 +1,10 @@
+{% set header_image = article.media.images|first %}
+<article class="blog__post">
+    <a href="{{ article.url }}" class="blog__post-link">
+        <h3>{{ article.title }}</h3>
+        <p class="blog__post-meta">{{ article.date|date('d, F Y') }}</p>
+    {% if header_image %}
+            <figure><img src="{{ header_image.url }}" alt="{{ article.title|e('html') }}"></figure>
+    {% endif %}
+    </a>
+</article>

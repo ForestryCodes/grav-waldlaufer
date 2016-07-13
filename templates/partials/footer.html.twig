@@ -1,0 +1,30 @@
+<div class="container">
+    <div class="row">
+        <div class="four columns footer__copyright">
+            <h3>{{ config.site.title }}</h3>
+            <p>&copy; {{ 'now'|date('Y') }} {{ site.author.copyright }}<br>All Rights Reserved.</p>
+        </div>
+        <nav class="four columns footer__nav">
+            <h4>Quick links</h4>
+            <ul class="footer__nav-list">
+{% for module in config.theme.quicklinks %}
+    {% set target = page.find(module.page) %}
+                <li class="footer__nav-item"><a href="{{ target.url }}">{{ target.title }}</a></li>
+{% endfor %}
+            </ul>
+        </nav>
+        <nav class="four columns footer__nav">
+            <h4>Connect</h4>
+            <ul class="footer__nav-list">
+{% for social in config.theme.social %}
+                <li class="footer__nav-item">
+                    <a href="{{ social.url }}"><i class="fa fa-{{ social.icon }}"></i> {{ social.name }}</a>
+                </li>
+{% endfor %}
+            </ul>
+        </nav>
+    </div>
+    <div class="footer__made">
+        <p>{{ config.theme.bottom_line }}</p>
+    </div>
+</div>
