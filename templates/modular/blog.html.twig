@@ -1,0 +1,23 @@
+<section class="blog" id="blog">
+    <div class="container">
+        <div class="row">
+            <div class="eight columns offset-by-two blog__intro">
+                {{ content }}
+            </div>
+        </div>
+        <div class="row">
+{% for article in page.find(page.header.blog_page).children.order('date', 'desc').slice(0, 3) %}
+    {% set header_image = article.media.images|first %}
+            <div class="four columns blog__post">
+                <a href="{{ article.url }}" class="blog__post-link">
+    {% if header_image %}
+                    <figure><img src="{{ header_image.url }}" alt="{{ article.title|e('html') }}"></figure>
+    {% endif %}
+                    <h3>{{ article.title }}</h3>
+                    <p class="blog__post-meta">{{ article.date|date('d, F Y') }}</p>
+                </a>
+            </div>
+{% endfor %}
+        </div>
+    </div>
+</section>

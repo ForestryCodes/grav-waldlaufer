@@ -1,0 +1,23 @@
+title: Recent Blog Posts
+@extends:
+  type: default
+  context: blueprints://pages
+
+form:
+  fields:
+    tabs:
+      type: tabs
+      active: 1
+
+      fields:
+        blog_setting:
+          type: tab
+          title: Blog Settings
+
+          fields:
+            header.blog_page:
+              label: Blog Page
+              type: pages
+              size: medium
+              classes: fency
+              show_modular: false
