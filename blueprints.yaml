@@ -21,11 +21,8 @@ form:
         bottom_line:
           label: Bottom line in footer
           type: text
-        author.copyright:
-          label: Copyright text in footer
-          type: text
         quicklinks:
-          label: Links to site pages
+          label: Quicklinks to site pages
           type: list
           fields:
             .page:
