@@ -1,0 +1,51 @@
+title: Slider
+@extends:
+  type: default
+  context: blueprints://pages
+
+form:
+  fields:
+    tabs:
+      type: tabs
+      active: 1
+
+      fields:
+        slider:
+          type: tab
+          title: Slider Items
+
+          fields:
+            header.slides:
+              name: slides
+              type: list
+              label: Slides
+
+              fields:
+                .headline:
+                  type: text
+                  label: Headline
+                .content:
+                  type: markdown
+                  showPreview: true
+                  name: content
+                  validate:
+                    type: textarea
+                .button_url:
+                  type: text
+                  label: Button URL
+                .button_text:
+                  type: text
+                  label: Button Text
+                .button_primary:
+                  type: toggle
+                  label: Primary
+                  highlight: 1
+                  default: 0
+                  options:
+                    1: 'Yes'
+                    0: 'No'
+                  validate:
+                    type: bool
+                .image:
+                  type: pagemediaselect
+                  label: Background Image

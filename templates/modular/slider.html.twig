@@ -1,0 +1,15 @@
+<section class="slider glide">
+    <div class="glide__wrapper">
+        <ul class="glide__track">
+{% for slide in page.header.slides %}
+            <li class="glide__slide" {% if page.media[slide.image] %}style="background-image:url({{ page.media[slide.image].url }});"{% endif %}>
+                <div class="container">
+                    <h2>{{ slide.headline }}</h2>
+                    <p>{{ slide.content }}</p>
+                    <a href="{{ slide.button_url }}" class="button {% if slide.button_primary %}button-primary{% endif %}">{{ slide.button_text }}</a>
+                </div>
+            </li>
+{% endfor %}
+        </ul>
+    </div>
+</section>
