@@ -1,0 +1,37 @@
+title: Project Showcase
+@extends:
+  type: default
+  context: blueprints://pages
+
+form:
+  fields:
+    tabs:
+      type: tabs
+      active: 1
+
+      fields:
+        project_showcase:
+          type: tab
+          title: Project Settings
+
+          fields:
+            header.button_text:
+              label: Button text
+              type: text
+              style: vertical
+            header.button_url:
+              label: Button URL
+              type: text
+              style: vertical
+            header.projects:
+              name: projects
+              type: list
+              label: Projects
+
+              fields:
+                .page:
+                  type: pages
+                  label: Project Page
+                  size: medium
+                  classes: fency
+                  show_modular: false
